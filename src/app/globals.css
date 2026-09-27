@@ -573,3 +573,50 @@ main{
 /* ---------- Next.js: <Link>(a)로 바뀐 버튼·카드 ---------- */
 a.btn, a.nav-btn{ display: inline-block; text-decoration: none; line-height: normal; }
 a.feature-card{ display: block; color: inherit; }
+
+/* ---------- Dictionary panel ---------- */
+.dict-panel{
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  font-size: 0.92rem;
+}
+.dict-muted{ color: var(--text-muted); text-align: center; }
+.dict-head{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 12px;
+}
+.dict-word{ font-size: 1.1rem; }
+.dict-phonetic{ color: var(--text-muted); }
+.dict-audio{
+  margin-left: auto;
+  border: none;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.dict-audio:hover{ background: color-mix(in srgb, var(--primary-light) 70%, var(--primary) 30%); }
+.dict-meaning + .dict-meaning{ margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--border); }
+.dict-pos{
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--accent);
+}
+.dict-meaning ol{ margin: 6px 0 0; padding-left: 20px; }
+.dict-meaning li + li{ margin-top: 6px; }
+.dict-example{ color: var(--text-muted); font-style: italic; margin-top: 6px; }
+.dict-source{ margin-top: 12px; color: var(--text-muted); font-size: 0.72rem; text-align: right; }

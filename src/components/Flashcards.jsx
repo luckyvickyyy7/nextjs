@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import CategoryTabs from './CategoryTabs'
+import DictionaryPanel from './DictionaryPanel'
 import { useStudy } from './StudyProvider'
 import { WORDS } from '@/data/content'
 
@@ -56,6 +57,8 @@ export default function Flashcards(){
             </div>
           </div>
         </div>
+
+        {flipped && <DictionaryPanel word={w.word} />}
 
         <div className="flash-progress">
           <span>{fcIndex + 1}</span> / <span>{words.length}</span>
